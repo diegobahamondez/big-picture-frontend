@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from "./components/Header";
+import CheckBook from "./components/CheckBook";
+import SaveBook from "./components/SaveBook";
+import Table from "./components/Table";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div id="background" className="text-base-300 text-justify min-h-dvh">
+        <div
+          id="content"
+          className="lg:flex text-base-content pb-0 min-h-screen max-w-screen px-2 py-12 md:px-12 md:pt-20 lg:px-24 lg:py-0"
+        >
+          <header className="lg:sticky lg:top-0 lg:flex lg:flex-col lg:max-h-screen lg:w-1/2  lg:justify-between lg:py-24">
+            <Header/>
+          </header>
+          <main
+            id="about"
+            className="relative flex flex-col right-0 px-4 lg:px-0 pb-0px pt-12 lg:pt-24 lg:w-1/2"
+          >
+            <CheckBook/>
+            <SaveBook/>
+            <Table/>
+          </main>
+        </div>
+    </div>
+  );
+};
 
-export default App
+export default App;
