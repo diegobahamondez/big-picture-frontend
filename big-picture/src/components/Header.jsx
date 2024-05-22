@@ -6,7 +6,6 @@ const Header = () => {
           <a href="/">Code Challenge for Big Picture!</a>
         </h1>
         <h2 className="pt-8 lg:pt-8 text-lg font-medium tracking-tight sm:text-xl">
-          LOGO
         </h2>
         <label className="flex justify-center cursor-pointer gap-2 pt-10">
         </label>
